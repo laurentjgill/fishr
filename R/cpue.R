@@ -1,5 +1,4 @@
-
-#' Calcuate catch per unit effort (CPUE)
+#' Calculate catch per unit effort (CPUE)
 #'
 #' @param catch Numeric vector of catch
 #' @param effort Numeric vector of effort
