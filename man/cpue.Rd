@@ -2,7 +2,7 @@
 % Please edit documentation in R/cpue.R
 \name{cpue}
 \alias{cpue}
-\title{Calcuate catch per unit effort (CPUE)}
+\title{Calculate catch per unit effort (CPUE)}
 \usage{
 cpue(catch, effort, gear_factor = 1)
 }
@@ -17,7 +17,7 @@ cpue(catch, effort, gear_factor = 1)
 A numeric vector of CPUE values
 }
 \description{
-Calcuate catch per unit effort (CPUE)
+Calculate catch per unit effort (CPUE)
 }
 \examples{
 cpue(100, 10)
