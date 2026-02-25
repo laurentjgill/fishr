@@ -6,11 +6,7 @@
 #' @param cpue Numeric vector of CPUE values. If `catch` and `effort` are
 #'   provided, this is computed automatically.
 #' @param area_swept Numeric vector of area swept (e.g., km²)
-#' @param catch Optional numeric vector of catch. If provided with `effort`,
-#'   CPUE is computed via `cpue()`.
-#' @param effort Optional numeric vector of effort. Required if `catch` is
-#'   provided.
-#' @param verbose Argument to say whether or not messages are shown
+#' @inheritParams cpue
 #' @param ... Additional arguments passed to `cpue()` when computing from
 #'   catch and effort (e.g., `method`, `gear_factor`).
 #'

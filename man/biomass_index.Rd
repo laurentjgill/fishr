@@ -19,13 +19,11 @@ provided, this is computed automatically.}
 
 \item{area_swept}{Numeric vector of area swept (e.g., km²)}
 
-\item{catch}{Optional numeric vector of catch. If provided with \code{effort},
-CPUE is computed via \code{cpue()}.}
+\item{catch}{Numeric vector of catch}
 
-\item{effort}{Optional numeric vector of effort. Required if \code{catch} is
-provided.}
+\item{effort}{Numeric vector of effort}
 
-\item{verbose}{Argument to say whether or not messages are shown}
+\item{verbose}{Logical indicating whether to print processing messages (default is FALSE)}
 
 \item{...}{Additional arguments passed to \code{cpue()} when computing from
 catch and effort (e.g., \code{method}, \code{gear_factor}).}
