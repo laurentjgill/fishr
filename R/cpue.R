@@ -3,7 +3,7 @@
 #' @param catch Numeric vector of catch
 #' @param effort Numeric vector of effort
 #' @param gear_factor Numeric adjustment for gear standard
-#' @param verbose Logical indicating whether to print processing messages (default is FALSE)
+#' @param verbose Logical indicating whether to print processing messages (default is FALSE), Also accpets the value of fishr.verbose
 #'
 #' @returns A numeric vector of CPUE values
 #' @export
