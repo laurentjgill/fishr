@@ -25,8 +25,12 @@ provided, this is computed automatically.}
 
 \item{verbose}{Logical indicating whether to print processing messages (default is FALSE)}
 
-\item{...}{Additional arguments passed to \code{cpue()} when computing from
-catch and effort (e.g., \code{method}, \code{gear_factor}).}
+\item{...}{
+  Arguments passed on to \code{\link[=cpue]{cpue}}
+  \describe{
+    \item{\code{gear_factor}}{Numeric adjustment for gear standard}
+    \item{\code{method}}{a method o "log" or "ratio"}
+  }}
 }
 \value{
 A numeric vector of biomass index values

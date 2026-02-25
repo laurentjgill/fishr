@@ -2,8 +2,6 @@
 
     Code
       biomass_index("ten", 5)
-    Message
-      Processing 1 records
     Condition
       Error in `cpue * area_swept`:
       ! non-numeric argument to binary operator

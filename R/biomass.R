@@ -7,8 +7,7 @@
 #'   provided, this is computed automatically.
 #' @param area_swept Numeric vector of area swept (e.g., km²)
 #' @inheritParams cpue
-#' @param ... Additional arguments passed to `cpue()` when computing from
-#'   catch and effort (e.g., `method`, `gear_factor`).
+#' @inheritDotParams cpue
 #'
 #' @return A numeric vector of biomass index values
 #' @export
