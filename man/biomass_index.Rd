@@ -18,7 +18,8 @@ CPUE is computed via \code{cpue()}.}
 \item{effort}{Optional numeric vector of effort. Required if \code{catch} is
 provided.}
 
-\item{...}{}
+\item{...}{Additional arguments passed to \code{cpue()} when computing from
+catch and effort (e.g., \code{method}, \code{gear_factor}).}
 }
 \value{
 Numeric vector of biomass index values

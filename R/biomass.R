@@ -7,7 +7,8 @@
 #'   CPUE is computed via `cpue()`.
 #' @param effort Optional numeric vector of effort. Required if `catch` is
 #'   provided.
-#' @param ...
+#' @param ... Additional arguments passed to `cpue()` when computing from
+#'   catch and effort (e.g., `method`, `gear_factor`).
 #'
 #' @returns Numeric vector of biomass index values
 #' @export
