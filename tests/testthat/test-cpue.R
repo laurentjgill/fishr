@@ -60,7 +60,7 @@ test_that("cpue stfu by default", {
 })
 
 #snapshot tests
-
+#errors
 test_that("cpue errors when input is not numeric", {
   expect_snapshot(
     cpue("five", 10),
@@ -68,5 +68,12 @@ test_that("cpue errors when input is not numeric", {
   )
 })
 
+#warnings
+test_that("cpue warns when cathc and effort lengths differ", {
+  expect_snapshot(
+    cpue(c(100, 20, 30), c(20, 5))
+  )
+  expect_no_warning(cpue(100, 10))
+})
 
 
