@@ -5,12 +5,20 @@
 \title{Calculate Biomass Index
 Calculate biomass index from CPUE and area swept}
 \usage{
-biomass_index(cpue, area_swept)
+biomass_index(cpue = NULL, area_swept, catch = NULL, effort = NULL, ...)
 }
 \arguments{
 \item{cpue}{Numeric vector of CPUE values}
 
 \item{area_swept}{Numeric vector of area swept (eg km squared)}
+
+\item{catch}{Optional numeric vector of catch. If provided with \code{effort},
+CPUE is computed via \code{cpue()}.}
+
+\item{effort}{Optional numeric vector of effort. Required if \code{catch} is
+provided.}
+
+\item{...}{}
 }
 \value{
 Numeric vector of biomass index values
