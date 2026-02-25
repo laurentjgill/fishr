@@ -17,3 +17,13 @@ test_that("error on invalid input", {
   expect_snapshot(biomass_index("ten", 5),
                   error = TRUE)
 })
+
+test_that("biomass uses verbosity when global options is set to TRUE", {
+  withr::local_options(fishr.verbose = TRUE)
+  expect_snapshot(biomass_index(10, 10))
+})
+
+test_that("biomass is not vrbose when option is FALSE", {
+  withr::local_options(fishr.verbose = FALSE)
+  expect_silent(biomass_index(10, 10))
+})
