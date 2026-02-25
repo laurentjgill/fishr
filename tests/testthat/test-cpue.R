@@ -74,4 +74,12 @@ test_that("cpue warns when cathc and effort lengths differ", {
   expect_no_warning(cpue(100, 10))
 })
 
+test_that("cpue uses verbosity when global options is set to TRUE", {
+  withr::local_options(fishr.verbose = TRUE)
+  expect_snapshot(cpue(10, 10))
+})
 
+test_that("cpue is not vrbose when option is FALSE", {
+  withr::local_options(fishr.verbose = FALSE)
+  expect_silent(cpue(10, 10))
+})

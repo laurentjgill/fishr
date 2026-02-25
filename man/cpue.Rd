@@ -9,7 +9,7 @@ cpue(
   effort,
   gear_factor = 1,
   method = c("ratio", "log"),
-  verbose = getOption("fishr.verbose", default = FALSE)
+  verbose = getOption("fishr.verbose", FALSE)
 )
 }
 \arguments{
@@ -19,9 +19,9 @@ cpue(
 
 \item{gear_factor}{Numeric adjustment for gear standard}
 
-\item{method}{Character: one of "ratio" or "log"}
+\item{method}{a method o "log" or "ratio"}
 
-\item{verbose}{Logical indicating whether to print processing messages (default is FALSE), Also accpets the value of fishr.verbose}
+\item{verbose}{Logical indicating whether to print processing messages (default is FALSE)}
 }
 \value{
 A numeric vector of CPUE values
