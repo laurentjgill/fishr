@@ -70,6 +70,7 @@ test_that("cpue errors when input is not numeric", {
 
 #warnings
 test_that("cpue warns when cathc and effort lengths differ", {
+  #if cpue length differs, it will just recycle the shorter vector to make it longer and throw a warning (no error)
   expect_snapshot(
     cpue(c(100, 20, 30), c(20, 5))
   )
