@@ -21,6 +21,7 @@ biomass_index <- function(cpue = NULL,
                           catch = NULL,
                           effort = NULL,
                           ...) {
+  rlang::check_dots_used()
 #if you have not provided cpue and you have provided catch + effort
   if (is.null(cpue) && (!is.null(catch) && !is.null(effort))){
     cpue <- cpue(catch, effort, ...)
