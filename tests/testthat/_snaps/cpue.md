@@ -16,3 +16,10 @@
     Output
       [1] 5.0 4.0 1.5
 
+# cpue uses verbosity when global options is set to TRUE
+
+    Code
+      cpue(10, 10)
+    Output
+      [1] 1
+
