@@ -55,5 +55,5 @@ biomass_index(
 )
 }
 \seealso{
-\code{\link[=cpue]{cpue()}}
+See \code{\link[=cpue]{cpue()}} for more details.
 }
