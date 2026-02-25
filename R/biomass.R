@@ -3,6 +3,8 @@
 #' Calculates biomass index from CPUE and area swept. Can optionally
 #' compute CPUE from catch and effort data.
 #'
+#' @seealso See [cpue()] for more details.
+#'
 #' @param cpue Numeric vector of CPUE values. If `catch` and `effort` are
 #'   provided, this is computed automatically.
 #' @param area_swept Numeric vector of area swept (e.g., km²)

@@ -54,3 +54,6 @@ biomass_index(
   method = "log"
 )
 }
+\seealso{
+\code{\link[=cpue]{cpue()}}
+}
