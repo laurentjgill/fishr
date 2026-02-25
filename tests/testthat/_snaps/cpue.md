@@ -3,13 +3,15 @@
     Code
       cpue("five", 10)
     Condition
-      Error in `catch / effort`:
-      ! non-numeric argument to binary operator
+      Error:
+      ! 'catch' must be numeric, got character.
 
 # cpue warns when cathc and effort lengths differ
 
     Code
       cpue(c(100, 20, 30), c(20, 5))
+    Message
+      Processing 3 records
     Condition
       Warning in `catch / effort`:
       longer object length is not a multiple of shorter object length

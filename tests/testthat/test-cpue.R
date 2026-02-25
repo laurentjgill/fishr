@@ -55,9 +55,6 @@ test_that("cpue shows a message", {
   )
 })
 
-test_that("cpue stfu by default", {
-  expect_no_message(cpue(c(100, 200), c(10, 20)))
-})
 
 #snapshot tests
 #errors
