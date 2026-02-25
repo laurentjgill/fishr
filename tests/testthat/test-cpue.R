@@ -46,3 +46,27 @@ test_that("cpue matches reference data", {
 
   expect_equal(result, reference_data$expected_cpue)
 })
+
+#test messaging
+test_that("cpue shows a message", {
+  expect_message(
+    cpue(c(100, 200), c(10, 20), verbose = TRUE),
+    "Processing 2 records"
+  )
+})
+
+test_that("cpue stfu by default", {
+  expect_no_message(cpue(c(100, 200), c(10, 20)))
+})
+
+#snapshot tests
+
+test_that("cpue errors when input is not numeric", {
+  expect_snapshot(
+    cpue("five", 10),
+    error = TRUE
+  )
+})
+
+
+
