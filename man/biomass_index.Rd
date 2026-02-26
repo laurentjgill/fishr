@@ -19,7 +19,7 @@ provided, this is computed automatically.}
 
 \item{area_swept}{Numeric vector of area swept (e.g., km²)}
 
-\item{catch}{Numeric vector of catch}
+\item{catch}{Numeric vector of catch or a data frame with catch and effort columns}
 
 \item{effort}{Numeric vector of effort}
 
@@ -28,8 +28,7 @@ provided, this is computed automatically.}
 \item{...}{
   Arguments passed on to \code{\link[=cpue]{cpue}}
   \describe{
-    \item{\code{gear_factor}}{Numeric adjustment for gear standard}
-    \item{\code{method}}{a method o "log" or "ratio"}
+    \item{\code{}}{}
   }}
 }
 \value{
