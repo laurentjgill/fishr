@@ -25,11 +25,22 @@ cpue <- function(catch, ...){
 cpue.numeric <- function(
     catch,
     effort,
-    gear_factor = 1,
+    gear_type = "nordic_gillnet",
     method = c("ratio", "log"),
     verbose = getOption("fishr.verbose", FALSE),
     ...
 ) {
+  if(!gear_type %in% gear_types$gear_type){
+    stop(
+      "gear_type must be one of:",
+      paste(gear_types$gear_type, collapse = ","),
+      call. = FALSE
+    )
+  }
+
+  gear_factor <- gear_types$gear_factor[gear_types$gear_type == gear_type]
+
+
   method <- match.arg(method)
 
   validate_numeric_inputs(catch = catch, effort = effort)
