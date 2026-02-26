@@ -89,7 +89,7 @@ test_that("cpue is not vrbose when option is FALSE", {
 #Testing S3 class
 test_that("cpue() returns a cpue_result object", {
   result <- cpue(c(100, 200), c(10, 20))
-  expect_s3_class(result, "cpue_results")
+  expect_s3_class(result, "cpue_result")
 })
 
 test_that("print.cpue_result displays expected output", {

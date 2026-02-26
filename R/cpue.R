@@ -27,7 +27,8 @@ cpue.numeric <- function(
     effort,
     gear_factor = 1,
     method = c("ratio", "log"),
-    verbose = getOption("fishr.verbose", FALSE)
+    verbose = getOption("fishr.verbose", FALSE),
+    ...
 ) {
   method <- match.arg(method)
 
