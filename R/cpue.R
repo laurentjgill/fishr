@@ -1,18 +1,28 @@
 #' Calculate catch per unit effort (CPUE)
 #'
-#' @param catch Numeric vector of catch
+#' @param ...  Additional arguments poassed to methods
+#' @param catch Numeric vector of catch or a data frame with catch and effort columns
+#'
+#' @export
+cpue <- function(catch, ...){
+  UseMethod("cpue")
+}
+
+# need rd name here so cpue gets integrated into the original documentation
+#' @rdname cpue
 #' @param effort Numeric vector of effort
 #' @param gear_factor Numeric adjustment for gear standard
 #' @param verbose Logical indicating whether to print processing messages (default is FALSE)
 #' @param method a method o "log" or "ratio"
 #'
-#' @returns A numeric vector of CPUE values
+#' @returns A numeric vector of CPUE values of the class "cpue results
+
 #' @export
 #'
 #' @examples
 #' cpue(100, 10)
 #' cpue(100, 10, gear_factor = 0.5)
-cpue <- function(
+cpue.numeric <- function(
     catch,
     effort,
     gear_factor = 1,
@@ -43,6 +53,37 @@ new_cpue_result(
 
 }
 
+#' @rdname cpue
+#' @export
+cpue.data.frame <- function(catch,
+                            effort,
+                            gear_factor = 1,
+                            method = c("ratio", "log"),
+                            verbose = getOption("fishr.verbose", FALSE),
+                            ...
+){
+  if (!"catch" %in% names(catch)) {
+    stop("Column 'catch' not found in data frame.", call. = FALSE)
+  }
+  if (!"effort" %in% names(catch)) {
+    stop("Column 'effort' not found in data frame.", call. = FALSE)
+  }
+  cpue(
+    catch = catch$catch,
+    effort = catch$effort,
+    gear_factor = gear_factor,
+    method = method,
+    verbose = verbose
+  )
+}
+
+#' @rdname cpue
+#' @export
+cpue.default <- function(catch, ...){
+  stop("Unsupported input type for cpue():", class(catch), call. = FALSE)
+}
+
+
 #' @export
 #has to include x and ... in the function call
 print.cpue_result <- function(x, ...){
@@ -72,6 +113,6 @@ new_cpue_result <- function(values, method, gear_factor, n_records) {
     method = method,
     gear_factor = gear_factor,
     n_records = n_records,
-    class = "cpue_results"
+    class = "cpue_result"
   )
 }
